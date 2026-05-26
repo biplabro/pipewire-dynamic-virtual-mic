@@ -1,29 +1,49 @@
-# Pipewire Dynamic Virtual Mic
+# PipeWire Dynamic Virtual Mic
 
-Lightweight dynamically adaptive virtual microphone solution for Linux using PipeWire.
+A lightweight and dynamically adaptive virtual microphone solution for Linux using PipeWire.
 
+This project creates a browser-compatible virtual microphone that automatically captures system audio from the currently active output device.
+
+Unlike many static virtual audio setups, this solution dynamically tracks output-device changes in real time. Whether audio switches between:
+
+- Bluetooth headphones
+- HDMI audio
+- onboard speakers
+- USB audio devices
+
+the virtual microphone automatically adapts without requiring manual rewiring or restarting applications.
+
+Designed to be:
+- lightweight
+- minimal
+- PipeWire-native
+- browser-compatible
+- persistent across reboots
+
+Set it up once and forget about it — the routing automatically follows your active audio device in the background.
+
+![Virtual-Mic-System-Entry](https://github.com/biplabro/pipewire-dynamic-virtual-mic/blob/main/images/virtual-microphone.png)
 ---
 
 # The Real Problem
 
-This project started from a very practical problem.
+AI transcription and data annotation workflows are often repetitive:
 
-AI transcription and data annotation tasks workflow was extremely repetitive:
-
-```
+```text
 listen → pause → type → rewind → correct
 ```
 
-This virual mic automates the `listen → pause → type` loop using the virtual mic and any online voice typing tool like google doc's native voice typing app. This code creates a working virtualmic input for the voice typing apps that work both natively and via browsers. 
+This project aims to reduce that friction by automating the:
 
+`listen → pause → type` portion of the workflow.
+
+The virtual microphone routes internal system audio directly into browser-compatible voice typing tools like Google Docs Voice Typing, allowing real-time speech-to-text transcription while keeping the human in the verification loop for accuracy.
 
 ---
 
-# Final Architecture
+# Solution Architecture
 
-```
-Applications (YouTube/Spotify/Games) >>> Real Audio Output Device >>> monitor source (.monitor) >>> module-loopback >>> VirtualMicSink (null sink) >>> VirtualMicSink.monitor >>> module-virtual-source >>> Virtual-Microphone >>> Chrome / Discord / OBS / etc
-```
+![Virtual-Mic-Architecture](https://github.com/biplabro/pipewire-dynamic-virtual-mic/blob/main/images/dynamic-virtual-mic-architecture.jpg)
 
 ---
 
@@ -104,6 +124,10 @@ chmod +x ~/.local/bin/virtual-mic-daemon.sh
 ```
 
 If you want to make the script run after booting your machine, set it to autostart, mentioned at the bottom of this page.
+
+---
+
+![virtual-mic-flowchart](https://github.com/biplabro/pipewire-dynamic-virtual-mic/blob/main/images/workflow-virtual-microphone.png)
 
 ---
 
