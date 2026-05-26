@@ -1,5 +1,7 @@
 # Core PipeWire Concepts
 
+![core-concepts-pipewire](https://github.com/biplabro/pipewire-dynamic-virtual-mic/blob/main/images/workflow-virtual-microphone.png)
+
 ## Sink
 
 A sink receives audio.
