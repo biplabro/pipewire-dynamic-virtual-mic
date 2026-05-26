@@ -101,7 +101,7 @@ cp virtual-mic-daemon.sh ~/.local/bin/
 
 ## Step 2 (Optional) — Edit The Script
 
-copy the cloned [virtual-mic-daemon.sh](https://github.com/biplabro/pipewire-dynamic-virtual-mic/blob/main/virtual-mic-daemon.sh) script to the `~/.local/bin` folder as mentioned in the previous step or edit the file as per requirements, like changing the device names and descriptions, if necessary.
+copy the cloned [virtual-mic-daemon.sh](https://github.com/biplabro/pipewire-dynamic-virtual-mic/blob/main/virtual-mic-daemon.sh) script to the `~/.local/bin` folder as mentioned in the previous step and edit the file as per requirements, like changing the device names and descriptions, if necessary.
 
 ```
 nano ~/.local/bin/virtual-mic-daemon.sh
