@@ -20,7 +20,7 @@ Designed to be:
 - browser-compatible
 - persistent across reboots
 
-Set it up once and forget about it — the routing automatically follows your active audio device in the background.
+Set it up once and forget about it, the routing automatically follows your active audio device in the background.
 
 ![Virtual-Mic-System-Entry](https://github.com/biplabro/pipewire-dynamic-virtual-mic/blob/main/images/virtual-microphone.png)
 ---
