@@ -4,105 +4,18 @@ Lightweight dynamically adaptive virtual microphone solution for Linux using Pip
 
 ---
 
-# Why This Project Exists
+# The Real Problem
 
 This project started from a very practical problem.
 
-AI transcription and data annotation tasks. The workflow was extremely repetitive:
+AI transcription and data annotation tasks workflow was extremely repetitive:
 
 ```
 listen → pause → type → rewind → correct
 ```
 
-# The Real Problem
+This virual mic automates the `listen → pause → type` loop using the virtual mic and any online voice typing tool like google doc's native voice typing app. This code creates a working virtualmic input for the voice typing apps that work both natively and via browsers. 
 
-Linux already has many [virtual audio solutions]([virtual-microphone · GitHub Topics · GitHub](https://github.com/topics/virtual-microphone)).
-
-There are:
-
-- JACK setups
-- PulseAudio loopbacks
-- OBS routing workflows
-- qpwgraph patching
-- PipeWire graph editors
-- complex GUI tools
-- static monitor-based scripts
-
-However, while exploring existing solutions, I repeatedly encountered **several practical problems**:
-
-## Most solutions were static
-
-They worked only for one output device.
-
-Example:
-
-```
-Bluetooth headphones → worksSwitch to HDMI → breaks
-```
-
----
-
-## Browser compatibility issues
-
-Many approaches expose: `.monitor` devices directly. PipeWire recognizes them perfectly. Browsers often do not. **Chrome/Discord/WebRTC frequently reject monitor-class devices**.
-
----
-
-## Manual rewiring
-
-Many solutions required:
-
-- reconnecting nodes manually
-- patching graphs repeatedly
-- restarting routing after device changes
-
----
-
-## Feedback-loop problems
-
-Recursive routing loops are surprisingly easy to create accidentally.
-
-Example:
-
-```
-speaker → monitor → virtual sink → speaker
-```
-
-which can rapidly create violent audio feedback.
-
----
-
-## Overly complex workflows
-
-Many solutions depend on:
-
-- JACK
-- GUI patchers
-- OBS-specific setups
-- heavyweight routing environments
-
-I wanted something:
-
-- lightweight
-- minimal
-- dynamic
-- browser-compatible
-- persistent across reboots
-
----
-
-# Project Goals
-
-The final system needed to:
-
-- capture any system audio
-- dynamically follow output-device changes
-- support Bluetooth / HDMI / speakers
-- expose a valid microphone device
-- work with browsers and WebRTC applications
-- avoid recursive feedback loops
-- persist across reboots
-- remain lightweight and scriptable
 
 ---
 
