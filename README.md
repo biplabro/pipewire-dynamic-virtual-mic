@@ -144,7 +144,8 @@ pactl list short sources
 You should see:
 
 ```
-VirtualMicVirtualMicSink.monitor
+VirtualMic
+VirtualMicSink.monitor
 ```
 
 ---
