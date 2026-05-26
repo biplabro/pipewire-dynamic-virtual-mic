@@ -75,8 +75,6 @@ Install PipeWire utilities:
 sudo apt update && sudo apt install -y pipewire-audio wireplumber git
 ```
 
-Dynamic Virtual Mic Architecture
-
 ---
 
 # Dynamic Virtual Mic Installation
