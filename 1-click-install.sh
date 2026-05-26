@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Run this script with " bash 1-click-install.sh "
+
 set -euo pipefail
 
 echo "================================================="
@@ -224,4 +226,4 @@ echo "pactl list short sinks"
 echo ""
 echo "Current default sink:"
 echo "pactl get-default-sink"
-echo ""```
+echo ""
