@@ -2,6 +2,8 @@
 
 ---
 
+![Core-concepts-virtual-mic](https://github.com/biplabro/pipewire-dynamic-virtual-mic/blob/main/images/dynamic-virtual-mic-architecture.jpg)
+
 ## Browser Cannot Detect Microphone
 
 ### Cause
