@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# setup once and forget
+
 VIRTUAL_SINK="VirtualMicSink"
 VIRTUAL_SOURCE="VirtualMic"
 
